@@ -2054,7 +2054,7 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-dom@^18:
+react-dom@^18, react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -2067,6 +2067,32 @@ react-hook-form@^7.49.3:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.49.3.tgz#576a4567f8a774830812f4855e89f5da5830435c"
   integrity sha512-foD6r3juidAT1cOZzpmD/gOKt7fRsDhXXZ0y28+Al1CHgX+AY1qIN9VSIIItXRq1dN68QrRwl1ORFlwjBaAqeQ==
 
+react-hook-toast@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-hook-toast/-/react-hook-toast-0.0.1.tgz#f9395ed64a01778bb74bfdfefc4581ce6f96a926"
+  integrity sha512-sbYRFH1b8J4HRo9jJZ5YRXPdacAgGqO3O7Z0C+hSf4Q4Fqx23mFaint0YFuFd0aenf0PN3UywNbQXmZpM4p5mg==
+  dependencies:
+    react "^18.2.0"
+    react-dom "^18.2.0"
+
+react-hook-toast@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-hook-toast/-/react-hook-toast-0.0.2.tgz#a78cacd703a3ef4a0d399844ba71b4f550fc3ff3"
+  integrity sha512-Z6RnAdQ5lMM/SlONTmhx07dtjuMatbN5dBizeg8eYFerLTbH2DdiyY4g8NPvoXidu4qLLXWcXIwqus6xsgslgw==
+  dependencies:
+    react "^18.2.0"
+    react-dom "^18.2.0"
+    react-hook-toast "^0.0.1"
+
+react-hook-toast@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-hook-toast/-/react-hook-toast-0.0.3.tgz#d15548b7a13ab0b8f55e2d1c1278e875b14c94ab"
+  integrity sha512-gKEvv6UOXNH5Xp012KbKqcm9PuXCsKVyL0A7ISE7gqkIVcXRsq95Y3bKJl0ihmhcQYeVKJoijSbHuwMt7qksUw==
+  dependencies:
+    react "^18.2.0"
+    react-dom "^18.2.0"
+    react-hook-toast "^0.0.2"
+
 react-icons@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.0.1.tgz#1694e11bfa2a2888cab47dcc30154ce90485feee"
@@ -2077,7 +2103,7 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react@^18:
+react@^18, react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
