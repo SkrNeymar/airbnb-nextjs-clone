@@ -5,7 +5,9 @@ import Logo from "@/components/navbar/Logo"
 import Search from "@/components/navbar/Search"
 import UserMenu from "@/components/navbar/UserMenu"
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { currentUser } = props
+  console.log({ currentUser })
   return (
     <div className="fixed z-10 w-full bg-white shadow-sm">
       <div className="py-4 border-b-[1px]">
