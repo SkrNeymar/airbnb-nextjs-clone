@@ -7,7 +7,6 @@ import UserMenu from "@/components/navbar/UserMenu"
 
 const Navbar = (props) => {
   const { currentUser } = props
-  console.log({ currentUser })
   return (
     <div className="fixed z-10 w-full bg-white shadow-sm">
       <div className="py-4 border-b-[1px]">
@@ -15,7 +14,7 @@ const Navbar = (props) => {
           <div className="flex flex-row items-center justify-between gap-3 select-none md:gap-0 ">
             <Logo />
             <Search />
-            <UserMenu />
+            <UserMenu currentUser={currentUser} />
           </div>
         </Container>
       </div>
