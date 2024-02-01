@@ -9,7 +9,7 @@ const Avatar = (props) => {
       height="30"
       width="30"
       alt="Avatar"
-      src={src || "/images/avatar-placeholder.png"}
+      src={src || "/images/placeholder.jpg"}
     />
   )
 }
