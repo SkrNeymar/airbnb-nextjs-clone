@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form"
 import Heading from "@/components/Heading"
 import { categories } from "@/components/navbar/Categories"
 import CategoryInput from "@/components/inputs/CategoryInput"
+import CountrySelect from "@/components/inputs/CountrySelect"
 
 const STEPS = {
   CATEGORY: 0,
@@ -42,6 +43,7 @@ const RentModal = () => {
   })
 
   const category = watch("category")
+  const location = watch("location")
 
   const setCustomValue = (id, value) => {
     setValue(id, value, {
@@ -95,12 +97,15 @@ const RentModal = () => {
 
   if (step === STEPS.LOCATION) {
     bodyContent = (
-      <div>
-        {/* <Heading
+      <div className="flex flex-col gap-8">
+        <Heading
           title="Where's your place located?"
-          subtitle="Add the location of your property"
-        /> */}
-        Location step
+          subtitle="Select the location of your property"
+        />
+        <CountrySelect
+          value={location}
+          onChange={(value) => setCustomValue("location", value)}
+        />
       </div>
     )
   }
