@@ -1,3 +1,4 @@
+"use client"
 import React from "react"
 import Container from "@/components/Container"
 import CategoryBox from "@/components/CategoryBox"
