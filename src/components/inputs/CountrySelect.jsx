@@ -33,7 +33,7 @@ const CountrySelect = (props) => {
           borderRadius: 6,
           colors: {
             ...theme.colors,
-            primary: "black",
+            primary: "#262626",
             primary25: "#ffe4e6",
           },
         })}
