@@ -8,6 +8,7 @@ import { categories } from "@/components/navbar/Categories"
 import CategoryInput from "@/components/inputs/CategoryInput"
 import CountrySelect from "@/components/inputs/CountrySelect"
 import Counter from "@/components/inputs/Counter"
+import ImageUpload from "@/components/inputs/ImageUpload"
 
 const STEPS = {
   CATEGORY: 0,
@@ -48,6 +49,7 @@ const RentModal = () => {
   const guestCount = watch("guestCount")
   const roomCount = watch("roomCount")
   const bathroomCount = watch("bathroomCount")
+  const imageSrc = watch("imageSrc")
 
   const setCustomValue = (id, value) => {
     setValue(id, value, {
@@ -143,6 +145,21 @@ const RentModal = () => {
           value={bathroomCount}
           onChange={(value) => setCustomValue("bathroomCount", value)}
           maxCount={10}
+        />
+      </div>
+    )
+  }
+
+  if (step === STEPS.IMAGES) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="Add some photos of your place"
+          subtitle="Show guests what your place looks like"
+        />
+        <ImageUpload
+          value={imageSrc}
+          onChange={(value) => setCustomValue("imageSrc", value)}
         />
       </div>
     )
