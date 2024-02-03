@@ -2,7 +2,7 @@
 import Modal from "@/components/modals/Modal"
 import useRentModal from "@/hooks/useRentModal"
 import { useMemo, useState } from "react"
-import { useForm } from "react-hook-form"
+import { set, useForm } from "react-hook-form"
 import Heading from "@/components/Heading"
 import { categories } from "@/components/navbar/Categories"
 import CategoryInput from "@/components/inputs/CategoryInput"
@@ -10,6 +10,9 @@ import CountrySelect from "@/components/inputs/CountrySelect"
 import Counter from "@/components/inputs/Counter"
 import ImageUpload from "@/components/inputs/ImageUpload"
 import Input from "@/components/inputs/Input"
+import axios from "axios"
+import toast from "react-hot-toast"
+import { useRouter } from "next/navigation"
 
 const STEPS = {
   CATEGORY: 0,
@@ -21,6 +24,7 @@ const STEPS = {
 }
 
 const RentModal = () => {
+  const router = useRouter()
   const rentModal = useRentModal()
   const [step, setStep] = useState(STEPS.CATEGORY)
   const [isLoading, setIsLoading] = useState(false)
@@ -65,7 +69,37 @@ const RentModal = () => {
     setStep((value) => value - 1)
   }
   const onNext = () => {
+    if (step === STEPS.CATEGORY && category === "") {
+      return toast.error("Please select a category")
+    }
+    if (step === STEPS.LOCATION && location === null) {
+      return toast.error("Please select a location")
+    }
     setStep((value) => value + 1)
+  }
+
+  const onSubmit = (data) => {
+    if (step !== STEPS.PRICE) {
+      return onNext()
+    }
+
+    setIsLoading(true)
+    axios
+      .post("/api/listings", data)
+      .then(() => {
+        toast.success("Listing created!")
+        router.refresh()
+        reset()
+        setStep(STEPS.CATEGORY)
+        rentModal.onClose()
+      })
+      .catch(() => {
+        toast.error("Something went wrong")
+        setIsLoading(false)
+      })
+      .finally(() => {
+        setIsLoading(false)
+      })
   }
 
   const actionLabel = useMemo(() => {
@@ -220,7 +254,7 @@ const RentModal = () => {
     <Modal
       isOpen={rentModal.isOpen}
       onClose={rentModal.onClose}
-      onSubmit={onNext}
+      onSubmit={handleSubmit(onSubmit)}
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryLabel}
       secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
