@@ -5,7 +5,7 @@ import Heading from "@/components/Heading"
 import Button from "@/components/Button"
 
 const EmptyState = (props) => {
-  const { title, subtitle, showReset } = props
+  const { title, subtitle, showReset, showResetLabel } = props
   const router = useRouter()
   return (
     <div className="h-[60vh] flex flex-col gap-2 justify-center items-center">
@@ -14,7 +14,7 @@ const EmptyState = (props) => {
         {showReset && (
           <Button
             outline
-            label="Remove all filters"
+            label={showResetLabel}
             onClick={() => router.push("/")}
           />
         )}

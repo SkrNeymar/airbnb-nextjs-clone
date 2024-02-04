@@ -14,6 +14,7 @@ export default async function Home() {
         title="No exact matches"
         subtitle="Try changing or removing some of your filters"
         showReset
+        showResetLabel="Remove all filters"
       />
     )
   }
@@ -22,7 +23,13 @@ export default async function Home() {
     <Container>
       <div className="grid grid-cols-1 gap-8 pt-24 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
         {listings.map((listing) => {
-          return <ListingCard key={listing.id} data={listing} currentUser={currentUser}/>
+          return (
+            <ListingCard
+              key={listing.id}
+              data={listing}
+              currentUser={currentUser}
+            />
+          )
         })}
       </div>
     </Container>
