@@ -4,8 +4,8 @@ import Container from "@/components/Container"
 import EmptyState from "@/components/EmptyState"
 import ListingCard from "@/components/listings/ListingCard"
 
-export default async function Home() {
-  const listings = await getListings()
+const Home = async ({ searchParams }) => {
+  const listings = await getListings(searchParams)
   const currentUser = await getCurrentUser()
 
   if (listings.length === 0) {
@@ -35,3 +35,5 @@ export default async function Home() {
     </Container>
   )
 }
+
+export default Home
