@@ -49,7 +49,7 @@ const ListingClient = (props) => {
 
   const onCreateReservation = useCallback(() => {
     if (!currentUser) {
-      return loginModal.open()
+      return loginModal.onOpen()
     }
 
     setIsLoading(true)
@@ -64,8 +64,7 @@ const ListingClient = (props) => {
       .then(() => {
         toast.success("Reservation created successfully")
         setDateRange(initialDateRange)
-        // TODO: Redirect to the /trips
-        router.refresh()
+        router.push("/trips")
       })
       .catch(() => {
         toast.error("Something went wrong")
