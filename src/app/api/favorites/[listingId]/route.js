@@ -1,6 +1,7 @@
 import getCurrentUser from "@/actions/getCurrentUser"
 import { NextResponse } from "next/server"
 import prisma from "@/libs/prismadb"
+export const dynamic = "force-dynamic"
 
 export async function POST(req, { params }) {
   const currentUser = await getCurrentUser()
