@@ -8,6 +8,7 @@ import RentModal from "@/components/modals/RentModal"
 import RegisterModal from "@/components/modals/RegisterModal"
 import getCurrentUser from "@/actions/getCurrentUser"
 import SearchModal from "@/components/modals/SearchModal"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: "Airbnb",
@@ -23,6 +24,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={font.className}>
+        <Analytics />
         <ToasterProvider />
         <SearchModal />
         <RentModal />
