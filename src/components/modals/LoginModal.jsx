@@ -26,8 +26,8 @@ const LoginModal = () => {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      email: "",
-      password: "",
+      email: "test@gmail.com",
+      password: "test123",
     },
   })
 
