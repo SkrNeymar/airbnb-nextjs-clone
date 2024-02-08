@@ -104,4 +104,4 @@ npm run dev
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/SkrNeymar/airbnb-nextjs-clone/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/SkrNeymar/airbnb-nextjs-clone/blob/main/LICENSE.txt) for more information.
