@@ -6,7 +6,7 @@
     Next.js App Route, NextAuth, React, Tailwind, Prisma, MongoDB, 
     <br/>
     <br/>
-    <a href="https://github.com/SkrNeymar/airbnb-nextjs-clone">View Demo</a>
+    <a href="https://nextjs-14-airbnb.vercel.app/">View Demo</a>
     .
     <a href="https://github.com/SkrNeymar/airbnb-nextjs-clone/issues">Report Bug</a>
     .
@@ -46,10 +46,6 @@ Features:
 - fetch data in server react components by directly accessing the database without exposing the API
 - unify loading and error handling
 - handle relations between Server and Child components!
-
-## Built With
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 ## Getting Started
 
