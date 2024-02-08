@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br/>
+<p align="center">
+  <h3 align="center">Next.js 14 Airbnb Full Stack Clone</h3>
+
+  <p align="center">
+    Next.js App Route, NextAuth, React, Tailwind, Prisma, MongoDB, 
+    <br/>
+    <br/>
+    <a href="https://github.com/SkrNeymar/airbnb-nextjs-clone">View Demo</a>
+    .
+    <a href="https://github.com/SkrNeymar/airbnb-nextjs-clone/issues">Report Bug</a>
+    .
+    <a href="https://github.com/SkrNeymar/airbnb-nextjs-clone/issues">Request Feature</a>
+  </p>
+</p>
+
+![Downloads](https://img.shields.io/github/downloads/SkrNeymar/airbnb-nextjs-clone/total) ![License](https://img.shields.io/github/license/SkrNeymar/airbnb-nextjs-clone)
+
+## About The Project
+
+![Screen Shot](https://res.cloudinary.com/djhhzsnda/image/upload/v1707379344/nextbnb_mbiexy.png)
+
+Features:
+
+- Next.js 14 App Route
+- Tailwind design
+- Tailwind animations and effects
+- Full responsiveness
+- Credential authentication
+- Google & Github OAuth authentication
+- Image upload using Cloudinary CDN
+- Client form validation and handling using react-hook-form
+- Server error handling using react-toast
+- Calendars with react-date-range
+- Page loading state
+- Page empty state
+- Booking / Reservation system
+- Guest reservation cancellation
+- Owner reservation cancellation
+- Creation and deletion of properties
+- Pricing calculation
+- Advanced search algorithm by category, date range, map location, number of guests, rooms and bathrooms
+- Favorites System
+- Shareable URL filters
+- POST and DELETE routes in route handlers (app/API)
+- fetch data in server react components by directly accessing the database without exposing the API
+- unify loading and error handling
+- handle relations between Server and Child components!
+
+## Built With
+
+This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 ## Getting Started
 
-First, run the development server:
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+
+- npm
+
+```sh
+npm install npm@latest -g
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Cloning the repository
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```shell
+git clone https://github.com/SkrNeymar/airbnb-nextjs-clone.git
+```
 
-## Learn More
+### Install packages
 
-To learn more about Next.js, take a look at the following resources:
+```shell
+npm i
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Setup .env file
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```js
+DATABASE_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+NEXTAUTH_SECRET=
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+NEXT_PUBLIC_CLOUDINARY_PRESET=
+```
 
-## Deploy on Vercel
+### Setup Prisma
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```shell
+npx prisma db push
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+
+### Start the app
+
+```shell
+npm run dev
+```
+
+## License
+
+Distributed under the MIT License. See [LICENSE](https://github.com/SkrNeymar/airbnb-nextjs-clone/blob/main/LICENSE.md) for more information.
