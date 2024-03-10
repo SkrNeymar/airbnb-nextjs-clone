@@ -7,14 +7,8 @@
     <br/>
     <br/>
     <a href="https://nextjs-14-airbnb.vercel.app/">View Demo</a>
-    .
-    <a href="https://github.com/SkrNeymar/airbnb-nextjs-clone/issues">Report Bug</a>
-    .
-    <a href="https://github.com/SkrNeymar/airbnb-nextjs-clone/issues">Request Feature</a>
   </p>
 </p>
-
-![Downloads](https://img.shields.io/github/downloads/SkrNeymar/airbnb-nextjs-clone/total) ![License](https://img.shields.io/github/license/SkrNeymar/airbnb-nextjs-clone)
 
 ## About The Project
 
